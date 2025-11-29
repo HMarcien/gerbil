@@ -27,7 +27,7 @@
   (path-expand "lib" (getenv "GERBIL_PREFIX")))
 
 (cond-expand
- ((or freebsd netbsd)
+ ((or freebsd netbsd openbsd)
   (def default-ld-options ["-lutil" "-lm" "-lpthread"]))
  (visualc
   (def default-ld-options ["Kernel32.Lib" "User32.Lib" "Gdi32.Lib" "WS2_32.Lib" "/subsystem:console" "/entry:WinMainCRTStartup"]))
